@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    background-color: #FAF9F5;
+    color: #1b261d;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Serif Heading Style to exactly match Healthify typography */
+.font-editorial {
+  font-family: 'Playfair Display', Georgia, serif;
+  letter-spacing: -0.02em;
+}
+
+.font-script {
+  font-family: 'Caveat', cursive;
+}
+
+/* Custom smooth transitions & animations */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 4px 20px rgba(45, 76, 36, 0.2);
+  }
+  50% {
+    box-shadow: 0 8px 30px rgba(45, 76, 36, 0.4);
+  }
+}
+
+.glow-btn {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Custom interactive pill button styles */
+.btn-primary {
+  background-color: #2b4923;
+  color: #ffffff;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-primary:hover {
+  background-color: #203919;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(43, 73, 35, 0.28);
+}
+
+.btn-outline {
+  border: 1px solid #7c8e76;
+  color: #2b4923;
+  background-color: transparent;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-outline:hover {
+  border-color: #2b4923;
+  background-color: rgba(43, 73, 35, 0.05);
+}
+
+/* Custom styled scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f0eb;
+}
+::-webkit-scrollbar-thumb {
+  background: #c3cbbf;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8e9e87;
+}
